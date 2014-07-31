@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+    <script src="d3.v3.min.js" charset="utf-8"></script>
+    <script src="bootstrap.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap.responsive.min.css">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <title></title>
+</head>
+
+<body bgcolor="#E6E6FA" onload="AmountMap();">
+<div style="color:#FF9900;font-size:30px;font-weight:bold;margin-top:0px;"><br><center> AAP Donations Distribution</center></div><br>
+<div class="btn-group row-fluid" align="center">
+	<button class="btn btn-warning span4" onclick="AmountMap();" id = 'setamount' style="display:inline-block;">Amount Distribution</button>
+	<button class="btn btn-info span4" onclick="DonorMap();" id = 'setdonor' style="display:inline-block;">Donor Distribution</button>
+	<button class="btn btn-success span4" onclick="AmountDonorMap();" id = 'setamountdonor' style="display:inline-block;">Average Amount Distribution</button>
+</div>
+<br>
+<h2><center><div id="tabletitle"></div></center></h2>
+<table class="table success table-condensed" border="1">
+        <thead>
+            <th width="30%"><span style="display: inline-block; width: 100px;">State</span></th>
+            <th width="60%"><span style="display: inline-block; width: 100px;">District</span></th>
+            <th width="2%"><span style="display: inline-block;">Donors</span></th>
+            <th width="4%"><span style="display: inline-block;">Amount</span></th>
+            <th width="4%"><span style="display: inline-block;">Average</span></th>
+        </thead>
+        <tr>
+	    <td><span id="state">.</span></td>
+            <td><span id="district">.</span></td>
+            <td><span id="donors">.</span></td>
+            <td><span id="amount">.</span></td>
+            <td><span id="avg_amount">.</span></td>
+	</tr>
+        <tr>
+	    <td><span id="state1">.</span></td>
+            <td><span id="district1">.</span></td>
+            <td><span id="donors1">.</span></td>
+            <td><span id="amount1">.</span></td>
+            <td><span id="avg_amount1">.</span></td>
+	</tr>
+</table>
+<div id = "legend" style="font-size:12px;"></div>
+<br>
+	<button class="btn btn-primary span1 offset3" onclick="Zoomin();" id = 'setamountdonor' style="display:inline-block;">+</button>
+	<button class="btn btn-primary span1" onclick="Zoomout();" id = 'setamountdonor' style="display:inline-block;">-</button>
+<br>
+
+<iframe id = "maps" src="india-districts.svg" style="border: none; float: left;" height="800px" width="700px"></iframe>
+
+<script type="text/javascript" src="map.js"></script>
+
+</body>
+</html>

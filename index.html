@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+    <script src="d3.v3.min.js" charset="utf-8"></script>
+    <script src="bootstrap.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-responsive.min.css">
+    <title></title>
+</head>
+
+<body bgcolor="#E6E6FA" onload="AmountMap();">
+<div style="color:#FF9900;font-size:50px;font-weight:bold;margin-top:0px;"><br><center> AAP Donations Distribution</center></div>
+<b><h6><div align="right" style="font-size:8px;">Created by: <br>Manav Agarwal (Manav.Agarwal4@gmail.com)</div></h6></b>
+
+<div class="btn-group row-fluid" align="center">
+	<button class="btn btn-warning span4" onclick="AmountMap();" id = 'setamount' style="display:inline-block;">Donation Amount Distribution</button>
+	<button class="btn btn-info span4" onclick="DonorMap();" id = 'setdonor' style="display:inline-block;">Number of Donors Distribution</button>
+	<button class="btn btn-success span4" onclick="AmountDonorMap();" id = 'setamountdonor' style="display:inline-block;">Average Amount per Donor Distribution</button>
+</div>
+<br>
+<h1><center><div id="tabletitle"></div></center></h1>
+<table><tr><td style="vertical-align:text-top;" width="20%">
+<div id = "legend"></div></td><td>
+
+
+<iframe src="./AAP/india-districts.svg" style="border: none; float: left;" height="800 px" width="700 px"></iframe></td><td valign="top"  width="25%">
+    <table class="table table-success table-condensed">
+        <tr>
+            <td><span style="display: inline-block; width: 100px;">State: </span></td>
+            <td><span id="state"></span></td>
+        </tr>
+        <tr>
+            <td><span style="display: inline-block; width: 100px;">District: </span></td>
+            <td><span id="district"></span></td>
+        </tr>
+        <tr>
+            <td><span style="display: inline-block; width: 100px;">Donors: </span></td>
+            <td><span id="donors"></span></td>
+        </tr>
+        <tr>
+            <td><span style="display: inline-block; width: 100px;">Amount: </span></td>
+            <td><span id="amount"></span></td>
+        </tr>
+        <tr>
+            <td><span style="display: inline-block; width: 100px;">Average: </span></td>
+            <td><span id="avg_amount"></span></td>
+        </tr>
+    </table>
+</td></tr><tr><td></td><td>
+
+<div align='center'><a href='http://www.hit-counts.com'><img src='http://www.hit-counts.com/counter.php?t=1270496' border='0' alt='Web Counter' /></a><br /><a href='http://www.hit-counts.com'>Web Counter</a></div>
+
+</td></tr></table>
+<script type="text/javascript" src="map.js"></script>
+
+</body>
+</html>
